@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@500;600&family=Quicksand:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background: url("cover-1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 450px;
+    padding: 16px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(83, 79, 79, 0.3);
+    border-left: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    perspective: 1000;
+}
+.dlbtn{
+    position: absolute;
+    top: 7%;
+    left: 10%;
+}
+.container .registration-card h1{
+    font-size: 25px;
+    padding: 30px 0px;
+    letter-spacing: 3px;
+    color:white;
+}
+.container .registration-card .Username input,
+.container .registration-card .Email input,
+.container .registration-card .Password input,
+.container .registration-card .C-Password input
+{
+    height: 30px;
+    width: 85%;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(83, 79, 79, 0.3);
+    border-left: 1px solid rgba(255,255,255,0.3);
+    padding: 0 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+   margin-bottom: 10px;
+}
+.container .registration-card .register button{
+    width: 80%;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 3px;
+    border: none;
+    color: white;
+    box-shadow:0 0 5px rgba(0,0,0,0.7) inset ;
+    font-size: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(68, 255, 255, 0.746);
+}
+.container .registration-card .Username  label,
+.container .registration-card .Email  label,
+.container .registration-card .Password  label,
+.container .registration-card .C-Password label{
+    text-align: left;
+    left: 2%;
+    color: rgba(40, 135, 135, 0.746);
+    font-size: 14px;
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+.check{
+    width: 60px;
+    height: 30px;
+    display: block;
+    position: relative;
+    background: #092c3e;
+    border-radius: 20px;
+    cursor:pointer;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+input[type="checkbox"]:checked ~ .check{
+    background: white;
+}
+
+.check::before{
+    content: '';
+    position:absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: white;
+    top: 2px;
+    left: 4px;
+    transition: 0.5s;
+}
+input[type="checkbox"]:checked ~ .check::before{
+    transform: translateX(-50px);
+}
+.check::after{
+    content: '';
+    position:absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #092c3e;
+    top: 2px;
+    right: 4px;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+input[type="checkbox"]:checked ~ .check::after{
+    transform: translateX(0px);
+}
+input[type="checkbox"]:checked ~ label{
+    color: white;
+}
